@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EliteCool HVAC Services | Premium AC Repair & Installation</title>
+    <meta name="description" content="24/7 emergency AC repair services. NATE-certified technicians serving your area with same-day service. Free estimates on new installations.">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    <link rel="preload" href="images/hero-technician.webp" as="image" media="(min-width: 768px)">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css">
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Emergency Alert Bar -->
+    <div class="emergency-alert">
+        <div class="container">
+            <div class="alert-content">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span>24/7 EMERGENCY SERVICE: </span>
+                <a href="tel:+15551234567" class="emergency-phone">Call (555) 123-4567</a>
+                <span class="alert-divider">|</span>
+                <span class="guarantee">100% Satisfaction Guarantee</span>
+            </div>
+            <div class="alert-social">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/15551234567" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="brand-logo">
+                <img src="image/ac.webp" alt="EliteCool HVAC Services" width="180" height="60">
+            </a>
+            
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#about" class="nav-link">About Us</a></li>
+                    <li><a href="#pricing" class="nav-link">Pricing</a></li>
+                    <li><a href="#reviews" class="nav-link">Reviews</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <div class="header-cta">
+                    <a href="tel:+15551234567" class="btn btn-primary btn-sm">
+                        <i class="fas fa-phone-alt"></i> Call Now
+                    </a>
+                </div>
+            </nav>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="certification-badges">
+                    <img src="image/nate.webp" alt="NATE Certified" width="80" height="80" loading="lazy">
+                    <img src="image/angi.webp" alt="Angi Certified" width="80" height="80" loading="lazy">
+                    <img src="image/epa.webp" alt="EPA Certified" width="80" height="80" loading="lazy">
+                </div>
+                
+                <h1 class="hero-title">Premium <span>HVAC Services</span> You Can Trust</h1>
+                <p class="hero-subtitle">24/7 emergency repairs • Same-day service • Lifetime workmanship warranty</p>
+                
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary btn-lg">
+                        <i class="fas fa-calendar-alt"></i> Schedule Service
+                    </a>
+                    <a href="tel:+15551234567" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-phone-alt"></i> (555) 123-4567
+                    </a>
+                </div>
+                
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>15+ Years Experience</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Local Family-Owned</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Upfront Pricing</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <img src="image/happy.webp" alt="HVAC technician servicing AC unit" width="600" height="600" loading="eager">
+                <div class="hero-badge">
+                    <div class="badge-content">
+                        <span class="badge-number">5,000+</span>
+                        <span class="badge-text">Happy Customers</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges Section -->
+    <section class="trust-badges">
+        <div class="container">
+            <p class="trust-title">Trusted By Homeowners & Businesses</p>
+            <div class="badge-grid">
+                <div class="badge-item">
+                    <img src="image/ac.webp" alt="Google 5-Star Rated" loading="lazy">
+                </div>
+                <div class="badge-item">
+                    <img src="image/ac.webp" alt="BBB Accredited A+" loading="lazy">
+                </div>
+                <div class="badge-item">
+                    <img src="image/ac.webp" alt="Angi Top Pro 2023" loading="lazy">
+                </div>
+                <div class="badge-item">
+                    <img src="image/ac.webp" alt="Best HVAC Service 2023" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Our Services</span>
+                <h2 class="section-title">Complete <span>HVAC Solutions</span></h2>
+                <p class="section-description">Professional services for all your heating and cooling needs</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>AC Repair</h3>
+                    <p>Fast, reliable repairs for all makes and models with a 1-year warranty on all parts.</p>
+                    <ul class="service-features">
+                        <li>Diagnosis & troubleshooting</li>
+                        <li>Refrigerant leak detection</li>
+                        <li>Compressor repairs</li>
+                        <li>Electrical component fixes</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">
+                        Request Repair <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card highlighted">
+                    <div class="service-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Maintenance Plans</h3>
+                    <p>Keep your system running efficiently with our comprehensive maintenance programs.</p>
+                    <ul class="service-features">
+                        <li>Bi-annual tune-ups</li>
+                        <li>Priority scheduling</li>
+                        <li>15% discount on repairs</li>
+                        <li>Extended warranty options</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <div class="popular-badge">Most Popular</div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <h3>AC Installation</h3>
+                    <p>Professional installation of energy-efficient systems with financing options.</p>
+                    <ul class="service-features">
+                        <li>Free load calculations</li>
+                        <li>SEER rating consultation</li>
+                        <li>10-year parts warranty</li>
+                        <li>Ductwork evaluation</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">
+                        Get Estimate <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="all-services-link">
+                <a href="#services" class="btn-link">
+                    View All Services <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="brands-section">
+        <div class="container">
+            <h3 class="brands-title">We Service All Major Brands</h3>
+            <div class="brands-slider">
+                <div class="brand-slide">
+                    <img src="image/brand.webp" alt="Trane" loading="lazy">
+                </div>
+                <div class="brand-slide">
+                    <img src="image/brand.webp" alt="Carrier" loading="lazy">
+                </div>
+                <div class="brand-slide">
+                    <img src="image/brand.webp" alt="Lennox" loading="lazy">
+                </div>
+                <div class="brand-slide">
+                    <img src="image/brand.webp" alt="Rheem" loading="lazy">
+                </div>
+                <div class="brand-slide">
+                    <img src="image/brand.webp" alt="Daikin" loading="lazy">
+                </div>
+                <div class="brand-slide">
+                    <img src="image/brand.webp" alt="Goodman" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="section-header">
+                    <span class="section-subtitle">About Us</span>
+                    <h2 class="section-title">Your Local <span>HVAC Experts</span></h2>
+                </div>
+                
+                <p class="about-description">Founded in 2008, EliteCool HVAC Services has been providing top-quality heating and cooling solutions to our community. As a family-owned and operated business, we treat every customer like family.</p>
+                
+                <div class="about-features">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h4>Certified Technicians</h4>
+                        <p>All our technicians are NATE-certified and undergo continuous training.</p>
+                    </div>
+                    
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h4>Fully Stocked Trucks</h4>
+                        <p>Most repairs completed same-day with our inventory of parts.</p>
+                    </div>
+                    
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Lifetime Warranty</h4>
+                        <p>We stand behind our work with industry-leading warranties.</p>
+                    </div>
+                    
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <h4>Honest Pricing</h4>
+                        <p>No hidden fees - we provide upfront pricing before any work begins.</p>
+                    </div>
+                </div>
+                
+                <div class="about-cta">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-handshake"></i> Meet Our Team
+                    </a>
+                </div>
+            </div>
+            
+            <div class="about-image">
+                <img src="image/team.jpg" alt="EliteCool HVAC team" width="540" height="540" loading="lazy">
+                <div class="experience-badge">
+                    <span class="years">15+</span>
+                    <span class="text">Years Experience</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Area Section -->
+    <section class="service-area-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Our Coverage</span>
+                <h2 class="section-title">Service <span>Area</span></h2>
+                <p class="section-description">We proudly serve these communities with prompt, professional service</p>
+            </div>
+            
+            <div class="area-container">
+                <div class="area-map" id="serviceAreaMap"></div>
+                
+                <div class="area-list">
+                    <h3 class="list-title">Cities We Serve:</h3>
+                    <ul class="city-list">
+                        <li><i class="fas fa-map-marker-alt"></i> Anytown</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Springfield</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Riverside</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Lakeside</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Hill Valley</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Oakdale</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Pinecrest</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Meadowbrook</li>
+                    </ul>
+                    
+                    <div class="area-cta">
+                        <p>Not sure if we service your area?</p>
+                        <a href="tel:+15551234567" class="btn btn-primary">
+                            <i class="fas fa-phone-alt"></i> Call to Verify
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Transparent Pricing</span>
+                <h2 class="section-title">Fair & Competitive <span>Rates</span></h2>
+                <p class="section-description">No hidden fees - just honest pricing for quality service</p>
+            </div>
+            
+            <div class="pricing-tabs">
+                <button class="tab-btn active" data-tab="repair">Repairs</button>
+                <button class="tab-btn" data-tab="maintenance">Maintenance</button>
+                <button class="tab-btn" data-tab="installation">Installation</button>
+            </div>
+            
+            <div class="pricing-content">
+                <div class="tab-pane active" id="repair">
+                    <div class="price-card">
+                        <h3 class="price-title">Diagnostic Fee</h3>
+                        <div class="price-amount">$89</div>
+                        <p class="price-description">Standard service call (applied toward repair)</p>
+                        <ul class="price-features">
+                            <li><i class="fas fa-check"></i> System evaluation</li>
+                            <li><i class="fas fa-check"></i> Problem identification</li>
+                            <li><i class="fas fa-check"></i> Repair estimate</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="price-card popular">
+                        <div class="popular-badge">Best Value</div>
+                        <h3 class="price-title">Common Repairs</h3>
+                        <div class="price-amount">$150-$450</div>
+                        <p class="price-description">Typical range for most AC repairs</p>
+                        <ul class="price-features">
+                            <li><i class="fas fa-check"></i> Capacitor replacement</li>
+                            <li><i class="fas fa-check"></i> Contactor replacement</li>
+                            <li><i class="fas fa-check"></i> Fan motor repairs</li>
+                            <li><i class="fas fa-check"></i> Refrigerant recharge</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="price-card">
+                        <h3 class="price-title">Major Repairs</h3>
+                        <div class="price-amount">$500-$1,200</div>
+                        <p class="price-description">For complex system issues</p>
+                        <ul class="price-features">
+                            <li><i class="fas fa-check"></i> Compressor replacement</li>
+                            <li><i class="fas fa-check"></i> Coil repairs</li>
+                            <li><i class="fas fa-check"></i> Full system overhaul</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Maintenance and Installation panes would go here -->
+            </div>
+            
+            <div class="pricing-disclaimer">
+                <p><strong>Note:</strong> Actual costs may vary based on system type, part availability, and complexity of repair. All prices include labor and parts unless otherwise noted.</p>
+            </div>
+            
+            <div class="pricing-cta">
+                <a href="#contact" class="btn btn-primary btn-lg">
+                    <i class="fas fa-envelope"></i> Get Exact Pricing
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financing Section -->
+    <section class="financing-section">
+        <div class="container">
+            <div class="financing-content">
+                <div class="section-header">
+                    <span class="section-subtitle">Payment Options</span>
+                    <h2 class="section-title">Flexible <span>Financing</span></h2>
+                </div>
+                
+                <p class="financing-text">We offer affordable payment solutions to make your HVAC services more accessible, including special financing options for new system installations.</p>
+                
+                <div class="financing-options">
+                    <div class="option-card">
+                        <div class="option-icon">
+                            <i class="fas fa-percentage"></i>
+                        </div>
+                        <h4>0% Interest</h4>
+                        <p>For 12-24 months on approved credit</p>
+                    </div>
+                    
+                    <div class="option-card">
+                        <div class="option-icon">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                        <h4>Low Payments</h4>
+                        <p>As low as $99/month</p>
+                    </div>
+                    
+                    <div class="option-card">
+                        <div class="option-icon">
+                            <i class="fas fa-file-signature"></i>
+                        </div>
+                        <h4>No Hidden Fees</h4>
+                        <p>Clear terms with no surprises</p>
+                    </div>
+                </div>
+                
+                <div class="financing-partners">
+                    <p>Financing provided through our trusted partners:</p>
+                    <div class="partner-logos">
+                        <img src="image/ac.webp" alt="Ally Financial" loading="lazy">
+                        <img src="image/ac.webp" alt="Greensky" loading="lazy">
+                        <img src="image/ac.webp" alt="Synchrony" loading="lazy">
+                    </div>
+                </div>
+                
+                <div class="financing-cta">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-calculator"></i> Check Eligibility
+                    </a>
+                    <a href="tel:+15551234567" class="btn btn-outline">
+                        <i class="fas fa-phone-alt"></i> Speak to Representative
+                    </a>
+                </div>
+            </div>
+            
+            <div class="financing-image">
+                <img src="image/family.jpg" alt="Happy family with new AC system" width="540" height="540" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Testimonials</span>
+                <h2 class="section-title">What Our <span>Customers Say</span></h2>
+                <p class="section-description">Rated 4.9/5 from 200+ reviews across platforms</p>
+            </div>
+            
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer">
+                            <img src="image/ac.webp" alt="Sarah J." loading="lazy">
+                            <div class="reviewer-info">
+                                <h4>Sarah J.</h4>
+                                <div class="review-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-source">
+                            <img src="image/ac.webp" alt="Google" loading="lazy">
+                        </div>
+                    </div>
+                    
+                    <div class="review-content">
+                        <h3>Saved us during a heatwave!</h3>
+                        <p>"Our AC went out during a 100° heatwave. EliteCool had a technician to our home within 2 hours and had our system running better than ever. Professional, knowledgeable, and reasonably priced. Highly recommend!"</p>
+                    </div>
+                    
+                    <div class="review-footer">
+                        <span class="review-date">2 weeks ago</span>
+                    </div>
+                </div>
+                
+                <!-- Additional review cards would go here -->
+            </div>
+            
+            <div class="reviews-cta">
+                <a href="https://g.page/r/EliteCoolHVAC/review" class="btn btn-primary" target="_blank">
+                    <i class="fas fa-pen"></i> Leave a Review
+                </a>
+                <a href="#" class="btn btn-outline">
+                    <i class="fas fa-book-open"></i> Read All Reviews
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="section-header">
+                    <span class="section-subtitle">Get in Touch</span>
+                    <h2 class="section-title">Contact <span>Us</span></h2>
+                    <p class="section-description">Ready to schedule service or have questions? We're here to help!</p>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Call Us</h4>
+                            <a href="tel:+15551234567">(555) 123-4567</a>
+                            <p>24/7 Emergency Service Available</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Email Us</h4>
+                            <a href="mailto:info@elitecoolhvac.com">info@elitecoolhvac.com</a>
+                            <p>Typically respond within 1 business day</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>WhatsApp</h4>
+                            <a href="https://wa.me/15551234567">+1 (555) 123-4567</a>
+                            <p>Fast response during business hours</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Visit Us</h4>
+                            <address>123 HVAC Way<br>Anytown, ST 12345</address>
+                            <p>By appointment only</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="business-hours">
+                    <h4>Business Hours</h4>
+                    <ul class="hours-list">
+                        <li>
+                            <span>Monday - Friday</span>
+                            <span>8:00 AM - 6:00 PM</span>
+                        </li>
+                        <li>
+                            <span>Saturday</span>
+                            <span>9:00 AM - 4:00 PM</span>
+                        </li>
+                        <li>
+                            <span>Sunday</span>
+                            <span>Emergency Service Only</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <form id="serviceRequestForm" class="service-form">
+                    <h3 class="form-title">Request Service</h3>
+                    <p class="form-subtitle">Fill out the form below and we'll contact you shortly</p>
+                    
+                    <div class="form-group">
+                        <label for="fullName">Full Name*</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email*</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone*</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="serviceType">Service Needed*</label>
+                        <select id="serviceType" name="serviceType" required>
+                            <option value="">Select Service</option>
+                            <option value="repair">AC Repair</option>
+                            <option value="maintenance">Maintenance</option>
+                            <option value="installation">New Installation</option>
+                            <option value="emergency">Emergency Service</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Details</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Describe your issue or request..."></textarea>
+                    </div>
+                    
+                    <div class="form-submit">
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fas fa-paper-plane"></i> Send Request
+                        </button>
+                    </div>
+                    
+                    <div class="form-disclaimer">
+                        <p>By submitting, you agree to our <a href="#">Privacy Policy</a> and consent to contact via phone, email, or text.</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col footer-about">
+                        <a href="index.html" class="footer-logo">
+                            <img src="images/logo-white.svg" alt="EliteCool HVAC Services" width="180" height="60">
+                        </a>
+                        <p class="about-text">Providing premium HVAC services to our community since 2008. Family-owned and operated with a commitment to excellence.</p>
+                        
+                        <div class="footer-social">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-col footer-services">
+                        <h3 class="footer-title">Services</h3>
+                        <ul class="footer-links">
+                            <li><a href="#">AC Repair</a></li>
+                            <li><a href="#">AC Installation</a></li>
+                            <li><a href="#">Heating Services</a></li>
+                            <li><a href="#">Maintenance Plans</a></li>
+                            <li><a href="#">Duct Cleaning</a></li>
+                            <li><a href="#">Emergency Services</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-col footer-links">
+                        <h3 class="footer-title">Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Reviews</a></li>
+                            <li><a href="#">Financing</a></li>
+                            <li><a href="#">Service Area</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-col footer-contact">
+                        <h3 class="footer-title">Contact Info</h3>
+                        <ul class="contact-info">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <address>123 HVAC Way<br>Anytown, ST 12345</address>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone-alt"></i>
+                                <a href="tel:+15551234567">(555) 123-4567</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:info@elitecoolhvac.com">info@elitecoolhvac.com</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock"></i>
+                                <span>Mon-Fri: 8AM-6PM<br>Sat: 9AM-4PM</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p class="copyright">&copy; 2023 EliteCool HVAC Services. All Rights Reserved by SAHIL DIWAN.</p>
+                    
+                    <div class="footer-legal">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Licenses</a>
+                        <a href="#">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Live Chat Widget -->
+    <div class="live-chat-widget">
+        <div class="chat-toggle">
+            <i class="fas fa-comment-dots"></i>
+            <span>Chat Now</span>
+        </div>
+        <div class="chat-container">
+            <div class="chat-header">
+                <h4>How can we help?</h4>
+                <button class="chat-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="chat-options">
+                <a href="https://wa.me/15551234567" class="chat-option whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="sms:+15551234567" class="chat-option sms">
+                    <i class="fas fa-sms"></i>
+                    <span>Text Message</span>
+                </a>
+                <a href="tel:+15551234567" class="chat-option call">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>Call Now</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+    
+    <!-- Google Maps API would be added here -->
+</body>
+</html>
